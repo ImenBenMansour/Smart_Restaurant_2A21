@@ -3,10 +3,15 @@
 #include <QMessageBox>
 #include <QDebug>
 #include "connection.h"
-
+#include<QFile>
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    QFile styleSheetFile("C:/Users/DELL/Downloads/Code_source_Atelier_Connexion/Atelier_Connexion/perstfic.qss");
+        styleSheetFile.open(QFile::ReadOnly);
+        QString styleSheet=QLatin1String(styleSheetFile.readAll());
+        a.setStyleSheet(styleSheet);
+
   connection C;
   bool  test=C.createConnection();
    MainWindow w;

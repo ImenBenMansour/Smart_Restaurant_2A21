@@ -72,3 +72,43 @@ bool Plat::modifier1(int id_Pl,QString nom_Pl,QString type,int nb_calories,int p
 
     return query.exec();
 }
+QSqlQueryModel* Plat::trier_id_Pl()
+{
+    QSqlQueryModel* model = new QSqlQueryModel();
+        model->setQuery("SELECT * from Plat ORDER BY id_Pl");
+
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("id_Pl"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom_Pl"));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("type"));
+        model->setHeaderData(3, Qt::Horizontal, QObject::tr("nb_calories"));
+        model->setHeaderData(4, Qt::Horizontal, QObject::tr("prix"));
+
+        return model ;
+}
+
+QSqlQueryModel* Plat::trier_nom_Pl()
+{
+    QSqlQueryModel* model = new QSqlQueryModel();
+        model->setQuery("SELECT * from Plat ORDER BY nom_Pl");
+
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("id_Pl"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom_Pl"));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("type"));
+        model->setHeaderData(3, Qt::Horizontal, QObject::tr("nb_calories"));
+        model->setHeaderData(4, Qt::Horizontal, QObject::tr("prix"));
+        return model ;
+}
+
+QSqlQueryModel* Plat::trier_type()
+{
+    QSqlQueryModel* model = new QSqlQueryModel();
+        model->setQuery("SELECT * from Plat ORDER BY type");
+
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("id_Pl"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom_Pl"));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("type"));
+        model->setHeaderData(3, Qt::Horizontal, QObject::tr("nb_calories"));
+        model->setHeaderData(4, Qt::Horizontal, QObject::tr("prix"));
+
+        return model ;
+}

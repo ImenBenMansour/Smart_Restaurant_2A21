@@ -32,6 +32,22 @@ private slots:
 
     void on_pb_modif_Pl_clicked();
 
+    void on_rb_tid_clicked();
+
+    void on_rb_tn_clicked();
+
+    void on_rb_tt_clicked();
+
+    void on_pb_pdf_clicked();
+
+    void on_le_id_sup_Re_textChanged(const QString &arg1);
+
+    void on_le_id_modif_Re_textChanged(const QString &arg1);
+
+    void on_le_id_sup_Pl_textChanged(const QString &arg1);
+
+    void on_le_id_modif_Pl_textChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
     Recette R;

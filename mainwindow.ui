@@ -33,10 +33,10 @@
      <widget class="QTabWidget" name="tabWidget_2">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>10</y>
+        <x>100</x>
+        <y>0</y>
         <width>501</width>
-        <height>361</height>
+        <height>391</height>
        </rect>
       </property>
       <property name="currentIndex">
@@ -63,57 +63,57 @@
           <rect>
            <x>10</x>
            <y>40</y>
-           <width>55</width>
+           <width>191</width>
            <height>16</height>
           </rect>
          </property>
          <property name="text">
-          <string>id_Re</string>
+          <string>saisir l'identifiant d'une recette</string>
          </property>
         </widget>
         <widget class="QLabel" name="label_11">
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>70</y>
-           <width>55</width>
+           <y>100</y>
+           <width>181</width>
            <height>16</height>
           </rect>
          </property>
          <property name="text">
-          <string>nom_Re</string>
+          <string>saisir le nom de la recette</string>
          </property>
         </widget>
         <widget class="QLabel" name="label_12">
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>100</y>
-           <width>71</width>
+           <y>160</y>
+           <width>201</width>
            <height>16</height>
           </rect>
          </property>
          <property name="text">
-          <string>ingredients</string>
+          <string>saisir les ingredients de la recette</string>
          </property>
         </widget>
         <widget class="QLabel" name="label_13">
          <property name="geometry">
           <rect>
-           <x>10</x>
-           <y>130</y>
-           <width>55</width>
+           <x>20</x>
+           <y>230</y>
+           <width>181</width>
            <height>16</height>
           </rect>
          </property>
          <property name="text">
-          <string>origine</string>
+          <string>saisir l'origine de la recette</string>
          </property>
         </widget>
         <widget class="QLineEdit" name="le_id_Re">
          <property name="geometry">
           <rect>
-           <x>180</x>
+           <x>230</x>
            <y>40</y>
            <width>113</width>
            <height>22</height>
@@ -123,8 +123,8 @@
         <widget class="QLineEdit" name="le_nom_Re">
          <property name="geometry">
           <rect>
-           <x>180</x>
-           <y>70</y>
+           <x>230</x>
+           <y>100</y>
            <width>113</width>
            <height>22</height>
           </rect>
@@ -133,8 +133,8 @@
         <widget class="QLineEdit" name="les_ingredients_Re">
          <property name="geometry">
           <rect>
-           <x>180</x>
-           <y>100</y>
+           <x>230</x>
+           <y>160</y>
            <width>113</width>
            <height>22</height>
           </rect>
@@ -143,8 +143,8 @@
         <widget class="QLineEdit" name="la_origine_Re">
          <property name="geometry">
           <rect>
-           <x>180</x>
-           <y>130</y>
+           <x>230</x>
+           <y>230</y>
            <width>113</width>
            <height>22</height>
           </rect>
@@ -153,8 +153,8 @@
         <widget class="QPushButton" name="pb_ajouter_Re">
          <property name="geometry">
           <rect>
-           <x>380</x>
-           <y>140</y>
+           <x>390</x>
+           <y>280</y>
            <width>93</width>
            <height>28</height>
           </rect>
@@ -188,20 +188,20 @@
         <property name="geometry">
          <rect>
           <x>40</x>
-          <y>90</y>
-          <width>101</width>
-          <height>31</height>
+          <y>50</y>
+          <width>421</width>
+          <height>71</height>
          </rect>
         </property>
         <property name="text">
-         <string>id_Re</string>
+         <string>saisir l'identifiant de la recette que vous souhaitez supprimer </string>
         </property>
        </widget>
        <widget class="QLineEdit" name="le_id_sup_Re">
         <property name="geometry">
          <rect>
-          <x>190</x>
-          <y>90</y>
+          <x>150</x>
+          <y>160</y>
           <width>141</width>
           <height>31</height>
          </rect>
@@ -211,7 +211,7 @@
         <property name="geometry">
          <rect>
           <x>380</x>
-          <y>180</y>
+          <y>250</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -230,12 +230,12 @@
          <rect>
           <x>20</x>
           <y>50</y>
-          <width>55</width>
+          <width>351</width>
           <height>16</height>
          </rect>
         </property>
         <property name="text">
-         <string>id_Re</string>
+         <string>saisir l'identifiant de la recette que vous souhaitez modifier</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_16">
@@ -243,12 +243,12 @@
          <rect>
           <x>20</x>
           <y>120</y>
-          <width>55</width>
+          <width>311</width>
           <height>16</height>
          </rect>
         </property>
         <property name="text">
-         <string>nom_Re</string>
+         <string>saisir le nom de la recette</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_17">
@@ -256,12 +256,12 @@
          <rect>
           <x>10</x>
           <y>180</y>
-          <width>81</width>
+          <width>321</width>
           <height>21</height>
          </rect>
         </property>
         <property name="text">
-         <string>ingredients</string>
+         <string>saisir les ingredients de la recette</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_18">
@@ -269,18 +269,18 @@
          <rect>
           <x>20</x>
           <y>270</y>
-          <width>55</width>
+          <width>281</width>
           <height>16</height>
          </rect>
         </property>
         <property name="text">
-         <string>origine</string>
+         <string>saisir l'origine de la recette</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="le_id_modif_Re">
         <property name="geometry">
          <rect>
-          <x>170</x>
+          <x>370</x>
           <y>50</y>
           <width>113</width>
           <height>22</height>
@@ -290,7 +290,7 @@
        <widget class="QLineEdit" name="le_nom_modif_Re">
         <property name="geometry">
          <rect>
-          <x>170</x>
+          <x>370</x>
           <y>120</y>
           <width>113</width>
           <height>22</height>
@@ -300,7 +300,7 @@
        <widget class="QLineEdit" name="les_ingredients_modiff">
         <property name="geometry">
          <rect>
-          <x>170</x>
+          <x>370</x>
           <y>180</y>
           <width>113</width>
           <height>22</height>
@@ -310,8 +310,8 @@
        <widget class="QLineEdit" name="la_origine_modiff">
         <property name="geometry">
          <rect>
-          <x>170</x>
-          <y>270</y>
+          <x>370</x>
+          <y>260</y>
           <width>113</width>
           <height>22</height>
          </rect>
@@ -320,8 +320,8 @@
        <widget class="QPushButton" name="pb_modifier_Re">
         <property name="geometry">
          <rect>
-          <x>380</x>
-          <y>280</y>
+          <x>180</x>
+          <y>330</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -340,10 +340,10 @@
      <widget class="QTabWidget" name="tabPLat_1">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>60</x>
         <y>20</y>
         <width>691</width>
-        <height>351</height>
+        <height>371</height>
        </rect>
       </property>
       <property name="currentIndex">
@@ -358,12 +358,12 @@
          <rect>
           <x>40</x>
           <y>50</y>
-          <width>55</width>
+          <width>391</width>
           <height>16</height>
          </rect>
         </property>
         <property name="text">
-         <string>id_Pl</string>
+         <string>saisir l'identifiant d'un plat</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_20">
@@ -371,12 +371,12 @@
          <rect>
           <x>40</x>
           <y>110</y>
-          <width>55</width>
+          <width>211</width>
           <height>16</height>
          </rect>
         </property>
         <property name="text">
-         <string>nom_Pl</string>
+         <string>saisir le nom du plat</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_21">
@@ -384,12 +384,12 @@
          <rect>
           <x>40</x>
           <y>170</y>
-          <width>55</width>
+          <width>201</width>
           <height>16</height>
          </rect>
         </property>
         <property name="text">
-         <string>type</string>
+         <string>saisir le type du plat</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_22">
@@ -397,12 +397,12 @@
          <rect>
           <x>40</x>
           <y>230</y>
-          <width>81</width>
+          <width>251</width>
           <height>20</height>
          </rect>
         </property>
         <property name="text">
-         <string>nb_calories</string>
+         <string>saisir le nombre de calories du plat</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_23">
@@ -410,18 +410,18 @@
          <rect>
           <x>40</x>
           <y>280</y>
-          <width>55</width>
+          <width>241</width>
           <height>16</height>
          </rect>
         </property>
         <property name="text">
-         <string>prix</string>
+         <string>saisir le prix du plat</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="le_id_Pl">
         <property name="geometry">
          <rect>
-          <x>210</x>
+          <x>360</x>
           <y>50</y>
           <width>113</width>
           <height>22</height>
@@ -431,7 +431,7 @@
        <widget class="QLineEdit" name="le_nom_Pl">
         <property name="geometry">
          <rect>
-          <x>210</x>
+          <x>360</x>
           <y>100</y>
           <width>113</width>
           <height>22</height>
@@ -441,7 +441,7 @@
        <widget class="QLineEdit" name="le_type">
         <property name="geometry">
          <rect>
-          <x>210</x>
+          <x>360</x>
           <y>160</y>
           <width>113</width>
           <height>22</height>
@@ -451,7 +451,7 @@
        <widget class="QLineEdit" name="le_nb_calories">
         <property name="geometry">
          <rect>
-          <x>210</x>
+          <x>360</x>
           <y>220</y>
           <width>113</width>
           <height>22</height>
@@ -461,8 +461,8 @@
        <widget class="QLineEdit" name="le_prix">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>280</y>
+          <x>360</x>
+          <y>270</y>
           <width>113</width>
           <height>22</height>
          </rect>
@@ -471,8 +471,8 @@
        <widget class="QPushButton" name="pb_ajouter_Pl">
         <property name="geometry">
          <rect>
-          <x>480</x>
-          <y>240</y>
+          <x>580</x>
+          <y>310</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -491,9 +491,74 @@
          <rect>
           <x>-5</x>
           <y>1</y>
-          <width>691</width>
+          <width>401</width>
           <height>321</height>
          </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_30">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>40</y>
+          <width>81</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>trie selon:</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="rb_tid">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>100</y>
+          <width>95</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>id_Re</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="rb_tn">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>170</y>
+          <width>95</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>nom_Re</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="rb_tt">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>230</y>
+          <width>95</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>type</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pb_pdf">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>270</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>PDF</string>
         </property>
        </widget>
       </widget>
@@ -504,21 +569,21 @@
        <widget class="QLabel" name="label_24">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>120</y>
-          <width>101</width>
+          <x>180</x>
+          <y>80</y>
+          <width>401</width>
           <height>20</height>
          </rect>
         </property>
         <property name="text">
-         <string>id_Pl</string>
+         <string>saisir l'identifiant du plat que vous souhaitez supprimer</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="le_id_sup_Pl">
         <property name="geometry">
          <rect>
-          <x>272</x>
-          <y>121</y>
+          <x>270</x>
+          <y>140</y>
           <width>131</width>
           <height>21</height>
          </rect>
@@ -527,8 +592,8 @@
        <widget class="QPushButton" name="pb_sup_Pl">
         <property name="geometry">
          <rect>
-          <x>550</x>
-          <y>240</y>
+          <x>290</x>
+          <y>220</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -545,8 +610,8 @@
        <widget class="QPushButton" name="pb_modif_Pl">
         <property name="geometry">
          <rect>
-          <x>560</x>
-          <y>260</y>
+          <x>320</x>
+          <y>300</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -560,12 +625,12 @@
          <rect>
           <x>40</x>
           <y>40</y>
-          <width>55</width>
+          <width>371</width>
           <height>16</height>
          </rect>
         </property>
         <property name="text">
-         <string>id_Pl</string>
+         <string>saisir l'identifiant du plat que vous souhaitez modifier</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_26">
@@ -573,67 +638,67 @@
          <rect>
           <x>40</x>
           <y>90</y>
-          <width>55</width>
+          <width>291</width>
           <height>16</height>
          </rect>
         </property>
         <property name="text">
-         <string>nom_Pl</string>
+         <string>saisir le nom du plat</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_27">
         <property name="geometry">
          <rect>
           <x>40</x>
-          <y>150</y>
-          <width>55</width>
+          <y>140</y>
+          <width>291</width>
           <height>16</height>
          </rect>
         </property>
         <property name="text">
-         <string>type</string>
+         <string>saisir le type du plat</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_28">
         <property name="geometry">
          <rect>
           <x>40</x>
-          <y>210</y>
-          <width>81</width>
+          <y>200</y>
+          <width>361</width>
           <height>20</height>
          </rect>
         </property>
         <property name="text">
-         <string>nb_calories</string>
+         <string>saisir le nombre de calories du plat</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_29">
         <property name="geometry">
          <rect>
           <x>40</x>
-          <y>270</y>
-          <width>55</width>
+          <y>250</y>
+          <width>301</width>
           <height>16</height>
          </rect>
         </property>
         <property name="text">
-         <string>prix</string>
+         <string>saisir le prix du plat</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="le_id_modif_Pl">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>30</y>
+          <x>500</x>
+          <y>40</y>
           <width>113</width>
-          <height>22</height>
+          <height>21</height>
          </rect>
         </property>
        </widget>
        <widget class="QLineEdit" name="le_nom_modif_Pl">
         <property name="geometry">
          <rect>
-          <x>210</x>
+          <x>500</x>
           <y>90</y>
           <width>113</width>
           <height>22</height>
@@ -643,8 +708,8 @@
        <widget class="QLineEdit" name="le_type_modif">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>150</y>
+          <x>500</x>
+          <y>140</y>
           <width>113</width>
           <height>22</height>
          </rect>
@@ -653,8 +718,8 @@
        <widget class="QLineEdit" name="le_nb_calories_modif">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>210</y>
+          <x>500</x>
+          <y>190</y>
           <width>113</width>
           <height>22</height>
          </rect>
@@ -663,8 +728,8 @@
        <widget class="QLineEdit" name="le_prix_modif">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>270</y>
+          <x>500</x>
+          <y>240</y>
           <width>113</width>
           <height>22</height>
          </rect>

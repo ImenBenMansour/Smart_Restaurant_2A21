@@ -27,7 +27,9 @@ public:
     bool supprimer1(int);
     bool modifier1(int,QString,QString,int,int);
 
-
+         QSqlQueryModel* trier_id_Pl();
+         QSqlQueryModel* trier_nom_Pl();
+         QSqlQueryModel* trier_type();
 
 
 private:
