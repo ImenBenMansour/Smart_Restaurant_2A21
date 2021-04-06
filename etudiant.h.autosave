@@ -1,0 +1,26 @@
+#ifndef ETUDIANT_H
+#define ETUDIANT_H
+#include <QString>
+#include <QDate>
+
+class produit
+{
+public:
+    produit();
+  produit (int,QString,int,QDate);
+  int getid () ;
+  QString getnom() ;
+  int getquantite () ;
+  QDate getdateexp () ;
+  
+  void setid(int) ;
+  void setnom(QString) ;
+  void setquantite (int) ;
+  void setdateexp (QDate) ;
+  bool ajouter () ;
+private:
+  int id ;
+  QString nom , prenom ;
+};
+
+#endif // ETUDIANT_H
