@@ -345,3 +345,24 @@ void MainWindow::on_le_id_modif_Pl_textChanged(const QString &arg1)
                                              "Click Cancel to exit."), QMessageBox::Cancel);
                  ui->le_id_modif_Pl->clear();}
 }*/
+
+void MainWindow::on_pb_rid_clicked()
+{
+    QString id_Pl = ui->le_id_Plr->text();
+       ui->tabplat->setModel(P.afficher_id_Pl(id_Pl));
+   }
+
+
+void MainWindow::on_pb_rn_clicked()
+{
+    QString nom_Pl = ui->le_nom_plr->text();
+       ui->tabplat->setModel(P.afficher_nom_Pl(nom_Pl));
+
+}
+
+void MainWindow::on_pb_rt_clicked()
+{
+    QString type = ui->le_typer->text();
+       ui->tabplat->setModel(P.afficher_type(type));
+
+}

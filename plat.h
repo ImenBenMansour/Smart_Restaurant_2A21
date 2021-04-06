@@ -31,6 +31,14 @@ public:
          QSqlQueryModel* trier_nom_Pl();
          QSqlQueryModel* trier_type();
 
+          QSqlQueryModel* afficher_id_Pl(QString);
+           bool search_id_Pl(QString);
+
+           QSqlQueryModel* afficher_nom_Pl(QString);
+           bool search_nom_Pl(QString);
+
+           QSqlQueryModel* afficher_type(QString);
+           bool search_type(QString);
 
 private:
     int id_Pl;

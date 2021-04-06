@@ -112,3 +112,83 @@ QSqlQueryModel* Plat::trier_type()
 
         return model ;
 }
+
+QSqlQueryModel* Plat::afficher_id_Pl(QString id_Pl)
+{
+    QSqlQuery query;
+    query.prepare("SELECT * FROM Plat WHERE ID_PL=:id_Pl ");
+    query.bindValue(":id_Pl", id_Pl);
+    QSqlQueryModel* model= new QSqlQueryModel();
+    query.exec();
+    model->setQuery(query);
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID_PL"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM_PL"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("TYPE"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("NB_CALORIES"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("PRIX"));
+    return model;
+}
+
+bool Plat::search_id_Pl(QString id_Pl)
+{
+    QSqlQuery query;
+    query.prepare("SELECT ID FROM PLAT WHERE ID_PL=:id_Pl");
+    query.bindValue(":id_Pl", id_Pl);
+    query.exec();
+
+    if(query.size()!=id_Pl){return false;}
+    else return true;
+}
+
+
+QSqlQueryModel* Plat::afficher_nom_Pl(QString nom_Pl)
+{
+    QSqlQuery query;
+    query.prepare("SELECT * FROM PLAT WHERE NOM_PL=:nom_Pl ");
+    query.bindValue(":nom_Pl", nom_Pl);
+    QSqlQueryModel* model= new QSqlQueryModel();
+    query.exec();
+    model->setQuery(query);
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID_PL"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM_PL"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("TYPE"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("NB_CALORIES"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("PRIX"));
+    return model;
+}
+
+bool Plat::search_nom_Pl(QString nom_Pl)
+{
+    QSqlQuery query;
+    query.prepare("SELECT NOM FROM PLAT WHERE NOM_PL=:nom_Pl");
+    query.bindValue(":nom_Pl", nom_Pl);
+    query.exec();
+
+    if(query.size()!=nom_Pl){return false;}
+    else return true;
+}
+QSqlQueryModel* Plat::afficher_type(QString type)
+{
+    QSqlQuery query;
+    query.prepare("SELECT * FROM PLAT WHERE type=:type ");
+    query.bindValue(":type", type);
+    QSqlQueryModel* model= new QSqlQueryModel();
+    query.exec();
+    model->setQuery(query);
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID_PL"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM_PL"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("TYPE"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("NB_CALORIES"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("PRIX"));
+    return model;
+}
+bool Plat::search_type(QString type)
+{
+    QSqlQuery query;
+    query.prepare("SELECT NOM FROM PLAT WHERE TYPE=:type");
+    query.bindValue(":type", type);
+    query.exec();
+
+    if(query.size()!=type){return false;}
+    else return true;
+}

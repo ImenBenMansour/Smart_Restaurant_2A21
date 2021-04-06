@@ -48,6 +48,12 @@ private slots:
 
     void on_le_id_modif_Pl_textChanged(const QString &arg1);
 
+    void on_pb_rid_clicked();
+
+    void on_pb_rn_clicked();
+
+    void on_pb_rt_clicked();
+
 private:
     Ui::MainWindow *ui;
     Recette R;

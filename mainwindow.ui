@@ -19,7 +19,7 @@
      <rect>
       <x>30</x>
       <y>40</y>
-      <width>781</width>
+      <width>971</width>
       <height>431</height>
      </rect>
     </property>
@@ -340,14 +340,14 @@
      <widget class="QTabWidget" name="tabPLat_1">
       <property name="geometry">
        <rect>
-        <x>60</x>
+        <x>20</x>
         <y>20</y>
-        <width>691</width>
+        <width>921</width>
         <height>371</height>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_11">
        <attribute name="title">
@@ -489,8 +489,8 @@
        <widget class="QTableView" name="tabplat">
         <property name="geometry">
          <rect>
-          <x>-5</x>
-          <y>1</y>
+          <x>0</x>
+          <y>0</y>
           <width>401</width>
           <height>321</height>
          </rect>
@@ -519,7 +519,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>id_Re</string>
+         <string>id_Pl</string>
         </property>
        </widget>
        <widget class="QRadioButton" name="rb_tn">
@@ -532,7 +532,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>nom_Re</string>
+         <string>nom_Pl</string>
         </property>
        </widget>
        <widget class="QRadioButton" name="rb_tt">
@@ -551,14 +551,135 @@
        <widget class="QPushButton" name="pb_pdf">
         <property name="geometry">
          <rect>
-          <x>550</x>
-          <y>270</y>
+          <x>570</x>
+          <y>300</y>
           <width>93</width>
           <height>28</height>
          </rect>
         </property>
         <property name="text">
          <string>PDF</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_31">
+        <property name="geometry">
+         <rect>
+          <x>600</x>
+          <y>40</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>recherche selon:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="le_id_Plr">
+        <property name="geometry">
+         <rect>
+          <x>650</x>
+          <y>100</y>
+          <width>113</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="le_nom_plr">
+        <property name="geometry">
+         <rect>
+          <x>650</x>
+          <y>170</y>
+          <width>113</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="le_typer">
+        <property name="geometry">
+         <rect>
+          <x>650</x>
+          <y>230</y>
+          <width>113</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_32">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>100</y>
+          <width>55</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>id_Pl</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_33">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>170</y>
+          <width>55</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>nom_Pl</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_34">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>230</y>
+          <width>55</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>type</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pb_rid">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>100</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Rechercher</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pb_rn">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>170</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Rechercher</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pb_rt">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>230</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Rechercher</string>
         </property>
        </widget>
       </widget>
