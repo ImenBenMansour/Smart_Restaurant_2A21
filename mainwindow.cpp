@@ -20,25 +20,25 @@ MainWindow::MainWindow(QWidget *parent)
 ui->tabrecette->setModel(R.afficher());
 ui->tabplat->setModel(P.afficher1());
 ui->le_id_Pl->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
-    ui->le_nom_Pl->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
-    ui->le_nb_calories->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
-    ui->le_type->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
-    ui->le_prix->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
-    ui->le_id_sup_Pl->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
-    ui->le_nom_modif_Pl->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
-    ui->le_id_modif_Pl->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
-    ui->le_nb_calories_modif->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
-    ui->le_prix_modif->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
-    ui->le_type_modif->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
-    ui->le_id_Re->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
-    ui->le_nom_Re->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
-    ui->les_ingredients_Re->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
-    ui->la_origine_Re->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
-    ui->le_id_sup_Re->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
-    ui->le_id_modif_Re->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
-    ui->le_nom_modif_Re->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
-    ui->les_ingredients_modiff->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
-    ui->la_origine_modiff->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
+ui->le_nom_Pl->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
+ui->le_type->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
+ui->le_nb_calories->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
+ui->le_prix->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
+ui->le_id_sup_Pl->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
+ui->le_nom_modif_Pl->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
+ui->le_id_modif_Pl->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
+ui->le_nb_calories_modif->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
+ui->le_prix_modif->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
+ui->le_type_modif->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
+ui->le_id_Re->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
+ui->le_nom_Re->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
+ui->les_ingredients_Re->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
+ui->la_origine_Re->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
+ui->le_id_sup_Re->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
+ui->le_id_modif_Re->setValidator(new QRegExpValidator(QRegExp("[0-9]{8}")));
+ui->le_nom_modif_Re->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
+ui->les_ingredients_modiff->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
+ui->la_origine_modiff->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]+")));
 }
 MainWindow::~MainWindow()
 
@@ -122,7 +122,7 @@ void MainWindow::on_pb_modifier_Re_clicked()
 
            else {
                QMessageBox::information(nullptr, QObject::tr("database is open"),
-                       QObject::tr("recette modifié:\n"
+                       QObject::tr("recette modifiée:\n"
             "click ok to exit"),QMessageBox::Ok);
                ui->tabrecette->setModel(R.afficher());
 
@@ -246,7 +246,7 @@ void MainWindow::on_pb_pdf_clicked()
                               painter.setFont(QFont("Arial", 50));
                              // painter.drawText(1100,2000,afficheDC);
                               painter.drawRect(1500,200,7300,2600);
-                              //painter.drawPixmap(QRect(7600,70,2000,2600),QPixmap("C:/Users/RH/Desktop/projecpp/image/logopdf.png"));
+                              //painter.drawPixmap(QRect(7600,70,2000,2600),QPixmap("C:/Users/DELL/Downloads/Code_source_Atelier_Connexion/Atelier_Connexion/logo.png"));
                               painter.drawRect(0,3000,9600,500);
                               painter.setFont(QFont("Arial", 9));
                               painter.drawRect(0,3000,9600,500);
