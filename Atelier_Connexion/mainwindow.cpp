@@ -34,31 +34,18 @@
 #include<QtSql/QSqlQuery>
 #include<QVariant>
 #include <QDateTime>
+#include <QPrinter>
+#include <QPrintDialog>
+#include <QTextDocument>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
-{
-    ui->setupUi(this);
-    QPixmap pix("C:/Users/HP/Documents/Atelier_Connexion/1.jpg");
-        int w=ui->label_ph->width();
-        int h=ui->label_ph->height();
-        ui->label_ph->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
-
-        QPixmap pix1("C:/Users/HP/Documents/Atelier_Connexion/2.jpg");
-            int w1=ui->label_ph_2->width();
-            int h1=ui->label_ph_2->height();
-            ui->label_ph_2->setPixmap(pix1.scaled(w1,h1,Qt::KeepAspectRatio));
-    ui->num->setValidator(new QIntValidator(0,9999999,this));
-    ui->tableView_aff->setModel(r.afficher());
-    ui->tableView_aff_2->setModel(c.afficher());
-
-}
+    { ui->setupUi(this); }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
-
 void MainWindow::on_pushButton_ajouter_clicked()
 { int num=ui->num->text().toInt();
     int heure=ui->heure->text().toInt();
@@ -102,7 +89,7 @@ ui->tableView_aff->setModel(r1.afficher());
 
 void MainWindow::on_pushButton_modif_clicked()
 {
-    int num=ui->num->text().toInt();
+    int num=ui->numnv->text().toInt();
             int heure=ui->heure_3->text().toInt();
             int nbrp=ui->nbrp_3->text().toInt();
             reservation re(num,heure,nbrp);
@@ -149,7 +136,7 @@ void MainWindow::on_pushButton_ajouter_2_clicked()
 void MainWindow::on_pushButton_S_2_clicked()
 {
     commande c1;
-    c1.setid(ui->lineEdit_idS->text().toInt());
+    c1.setid(ui->lineEdit_idS_2->text().toInt());
     bool test;
     test=c1.Supprimer(c1.getid());
     if(test)
@@ -269,3 +256,115 @@ void MainWindow::on_Psearch_5_textChanged(const QString &arg1)
                                      "Click Cancel to exit."), QMessageBox::Cancel);
          ui->Psearch_5->clear();}
 }
+
+void MainWindow::on_exporter_button_clicked()
+{
+    QString strStream;
+            QTextStream out(&strStream);
+
+
+
+            const int rowCount = ui->tableView_aff->model()->rowCount();
+            const int columnCount = ui->tableView_aff->model()->columnCount();
+
+            out <<  "<html>\n"
+                "<head>\n"
+
+                "<meta Content=\"Text/html; charset=Windows-1251\">\n"
+                <<  QString("<title>%60 les postes</title>\n").arg("poste")
+                <<  "</head>\n"
+                "<body bgcolor=#ffffff link=#5000A0>\n"
+                "<table border=1 cellspacing=0 cellpadding=2>\n";
+            out << "<thead><tr bgcolor=#f0f0f0>";
+            for (int column = 0; column < columnCount; column++)
+                if (! ui->tableView_aff->isColumnHidden(column))
+                    out << QString("<th>%1</th>").arg(ui->tableView_aff->model()->headerData(column, Qt::Horizontal).toString());
+            out << "</tr></thead>\n";
+
+            for (int row = 0; row < rowCount; row++) {
+                out << "<tr>";
+                for (int column = 0; column < columnCount; column++) {
+                    if (!ui->tableView_aff->isColumnHidden(column)) {
+                        QString data = ui->tableView_aff->model()->data(ui->tableView_aff->model()->index(row, column)).toString().simplified();
+                        out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
+                    }
+                }
+                out << "</tr>\n";
+            }
+            out <<  "</table>\n"
+                "</body>\n"
+                "</html>\n";
+
+            QTextDocument *document = new QTextDocument();
+            document->setHtml(strStream);
+
+            QPrinter printer;
+
+            QPrintDialog *dialog = new QPrintDialog(&printer, NULL);
+            if (dialog->exec() == QDialog::Accepted) {
+                document->print(&printer);
+            }
+
+            delete document;
+}
+
+void MainWindow::on_PDF_Button_clicked()
+{
+    QString strStream;
+        QTextStream out(&strStream);
+
+        const int rowCount = ui->tableView_aff->model()->rowCount();
+        const int columnCount = ui->tableView_aff->model()->columnCount();
+
+        out <<  "<html>\n"
+            "<head>\n"
+            "<meta Content=\"Text/html; charset=Windows-1251\">\n"
+            <<  QString("<title>%1</title>\n").arg("strTitle")
+            <<  "</head>\n"
+            "<body bgcolor=#ffffff link=#5000A0>\n"
+
+            //     "<align='right'> " << datefich << "</align>"
+            "<center> <H1>Liste Des suivi </H1></br></br><table border=1 cellspacing=0 cellpadding=2>\n";
+
+        // headers
+        out << "<thead><tr bgcolor=#f0f0f0> <th>Numero</th>";
+        for (int column = 0; column < columnCount; column++)
+            if (!ui->tableView_aff->isColumnHidden(column))
+                out << QString("<th>%1</th>").arg(ui->tableView_aff->model()->headerData(column, Qt::Horizontal).toString());
+        out << "</tr></thead>\n";
+
+        // data table
+        for (int row = 0; row < rowCount; row++)
+        {
+            out << "<tr> <td bkcolor=0>" << row + 1 << "</td>";
+            for (int column = 0; column < columnCount; column++)
+            {
+                if (!ui->tableView_aff->isColumnHidden(column))
+                {
+                    QString data = ui->tableView_aff->model()->data(ui->tableView_aff->model()->index(row, column)).toString().simplified();
+                    out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
+                }
+            }
+            out << "</tr>\n";
+        }
+        out <<  "</table> </center>\n"
+            "</body>\n"
+            "</html>\n";
+
+        QString fileName = QFileDialog::getSaveFileName((QWidget * )0, "Sauvegarder en PDF", QString(), "*.pdf");
+        if (QFileInfo(fileName).suffix().isEmpty())
+        {
+            fileName.append(".pdf");
+        }
+
+        QPrinter printer (QPrinter::PrinterResolution);
+        printer.setOutputFormat(QPrinter::PdfFormat);
+        printer.setPaperSize(QPrinter::A4);
+        printer.setOutputFileName(fileName);
+
+        QTextDocument doc;
+        doc.setHtml(strStream);
+        doc.setPageSize(printer.pageRect().size()); // This is necessary if you want to hide the page number
+        doc.print(&printer);
+}
+
