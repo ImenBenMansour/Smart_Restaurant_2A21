@@ -1,6 +1,6 @@
 #ifndef CONNECTION_H
 #define CONNECTION_H
-#include <QSqlDatabase>
+#include <QSqlDatabase> /* connexion a la base */
 #include <QSqlError>
 #include <QSqlQuery>
 

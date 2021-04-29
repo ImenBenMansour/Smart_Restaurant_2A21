@@ -33,8 +33,11 @@ public:
   QSqlQueryModel* afficher_four_nom(QString);
   bool search_nom(QString);
 
+  QSqlQueryModel* afficher_four_quantite(QString);
+  bool search_quantite(QString);
 
 
+/* void statistique(); */
 
 private:
   int id ;

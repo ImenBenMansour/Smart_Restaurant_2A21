@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include<QApplication>
 #include"produit.h"
+#include "notification.h"
 
 
 
@@ -44,9 +45,26 @@ private slots:
 
     void on_pb_rechnom_clicked();
 
+    void on_id_sup_textChanged(const QString &arg1);
+
+    void on_id_mod_textChanged(const QString &arg1);
+
+    void on_id_suppr_textChanged(const QString &arg1);
+
+    void on_ide_mod_textChanged(const QString &arg1);
+
+    void on_pb_rechdate_clicked();
+
+    void on_pb_pdf_clicked();
+
+    void on_pb_retoureq_clicked();
+
+    void on_pb_imprimerprod_clicked();
+
 private:
     Ui::MainWindow *ui;
      produit P ;
      equipement E ;
+     Notification N;
 };
 #endif // MAINWINDOW_H

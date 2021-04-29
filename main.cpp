@@ -4,10 +4,20 @@
 #include<QDebug>
 #include <QMessageBox>
 #include<QFile>
+#include <QTranslator>
+#include <QInputDialog>
 int main(int argc, char *argv[])
 {QApplication a(argc, argv);
+    QTranslator T ;
+    QStringList langs ;
+    langs << "French" << "English" ;
+    const QString lang =QInputDialog::getItem(NULL,"language","select a language", langs );
 
-    QFile styleSheetFile("C:/Users/21658/OneDrive/Bureau/Atelier_Connexion/perstfic.qss");
+    if (lang=="English")
+    {T.load(":/ingles.qm");}
+    if(lang!="French")
+    {a.installTranslator(&T); }
+    QFile styleSheetFile("C:/Users/21658/OneDrive/Bureau/Atelier_Connexion/Perstfic.qss");
         styleSheetFile.open(QFile::ReadOnly);
         QString styleSheet=QLatin1String(styleSheetFile.readAll());
         a.setStyleSheet(styleSheet);

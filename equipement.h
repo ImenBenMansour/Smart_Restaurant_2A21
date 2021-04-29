@@ -3,7 +3,6 @@
 #include <QString>
 #include <QDate>
 #include <QSqlQueryModel>
-
 class equipement
 {
 public:

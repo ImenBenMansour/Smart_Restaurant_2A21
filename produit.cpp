@@ -185,5 +185,73 @@ bool produit::search_nom(QString nom)
 }
 
 
+QSqlQueryModel* produit::afficher_four_quantite(QString quantite)
+{
+    QSqlQuery query;
+    query.prepare("SELECT * FROM PRODUIT WHERE QUANTITE=:quantite ");
+    query.bindValue(":quantite", quantite);
+    QSqlQueryModel* model= new QSqlQueryModel();
+    query.exec();
+    model->setQuery(query);
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("QUANTITE"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("DATE_EXP"));
+    return model;
+}
+
+bool produit::search_quantite(QString quantite)
+{
+    QSqlQuery query;
+    query.prepare("SELECT ID FROM PRODUIT WHERE QUANTITE=:quantite");
+    query.bindValue(":quantite", quantite);
+    query.exec();
+
+    if(query.size()!=quantite){return false;}
+    else return true;
+}
+
+/*
+void produit::statistique()
+{
+    QPieSeries *series = new QPieSeries();
+              QChart *chart = new QChart();
+
+ QSqlQuery query;
+     int cin=0;
+
+              series->append("Jane", 1);
+              series->append("Joe", 2);
+              series->append("Andy", 3);
+              series->append("Barbara", 4);
+              series->append("Axel", 5);
+          //![1]
+
+          //![2]
+              QPieSlice *slice = series->slices().at(1);
+              slice->setExploded();
+              slice->setLabelVisible();
+              slice->setPen(QPen(Qt::darkGreen, 2));
+              slice->setBrush(Qt::green);
+          //![2]
+
+          //![3]
+              chart->addSeries(series);
+              chart->setTitle("Simple piechart example");
+              chart->legend()->hide();
+          //![3]
+
+          //![4]
+
+          //![4]
+
+          //![5]
 
 
+
+}
+} QChartView *chartView = new QChartView(chart);
+                  chartView->setRenderHint(QPainter::Antialiasing);
+                               chartView->show();
+}
+*/
