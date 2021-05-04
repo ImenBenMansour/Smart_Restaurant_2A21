@@ -4,6 +4,7 @@
 #include "recette.h"
 #include "plat.h"
 
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
