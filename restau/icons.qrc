@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>img/event.png</file>
+        <file>img/fidelite.png</file>
+        <file>img/produit.png</file>
+        <file>img/recette.png</file>
+        <file>img/reservation.png</file>
+        <file>img/add.png</file>
+        <file>img/cancel.png</file>
+        <file>img/delete.png</file>
+        <file>img/pdf.png</file>
+        <file>img/reset.png</file>
+        <file>img/return.png</file>
+        <file>img/update.png</file>
+        <file>img/search.png</file>
+        <file>img/stat.png</file>
+        <file>img/print.png</file>
+        <file>img/send.png</file>
+        <file>img/Rh.png</file>
+    </qresource>
+</RCC>
